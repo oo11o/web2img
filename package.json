@@ -1,0 +1,39 @@
+{
+  "name": "web2img",
+  "version": "0.0.1",
+  "description": "Screenshot webpage or part of html",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oo11o/web2img.git"
+  },
+  "keywords": [
+    "screenshot",
+    "screen",
+    "scrabing",
+    "html",
+    "jpg",
+    "image",
+    "png",
+    "webp",
+    "selector"
+  ],
+  "author": "Volodymyr Yurchenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oo11o/web2img/issues"
+  },
+  "homepage": "https://github.com/oo11o/web2img#readme",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.0.1"
+  },
+  "dependencies": {
+    "puppeteer": "^16.2.0"
+  }
+}
