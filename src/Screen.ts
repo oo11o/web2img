@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const viewports = require('viewport')
 
 module.exports = class Screen {
     conf = {
@@ -11,11 +12,7 @@ module.exports = class Screen {
     async capture(url: string, selector: string | null = null) {
         const browser = await puppeteer.launch({headless: true});
         const page = await browser.newPage();
-        await page.setViewport({
-            width:  1920,
-            height: 1080,
-            deviceScaleFactor: 1,
-        });
+        await page.setViewport(viewports.desk_1920);
 
         try {
             await page.goto(url);
@@ -26,7 +23,7 @@ module.exports = class Screen {
 
         if (selector) {
             try {
-                await page.waitForSelector(selector, {timeout: 2000});          // Method to ensure that the element is loaded
+                await page.waitForSelector(selector, {timeout: 2000});
                 const section = await page.$(selector);
                 await section.screenshot({
                     path: this.conf.image.selector
